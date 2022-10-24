@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:selection_controls/screens/controlcheckbox.dart';
 
 void main() {
-  runApp(MaterialApp(
-      home: Scaffold(
-    body: Center(
-        child: Checkbox(
-      value: true,
-      onChanged: ((value) {
-        print(value);
-      }),
-    )),
-  )));
+  runApp(MaterialApp(home: ControlCheckbox()));
 }
