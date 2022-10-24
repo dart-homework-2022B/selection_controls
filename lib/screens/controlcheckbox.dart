@@ -18,7 +18,13 @@ class _ControlCheckboxState extends State<ControlCheckbox> {
           child: Checkbox(
         value: isChecked,
         onChanged: ((value) {
-          print(value);
+          setState(() {
+            if (value == true) {
+              isChecked = true;
+            } else {
+              isChecked = false;
+            }
+          });
         }),
       )),
     );
