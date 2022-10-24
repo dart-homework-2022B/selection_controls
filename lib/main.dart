@@ -5,8 +5,10 @@ void main() {
       home: Scaffold(
     body: Center(
         child: Checkbox(
-      value: false,
-      onChanged: ((value) {}),
+      value: true,
+      onChanged: ((value) {
+        print(value);
+      }),
     )),
   )));
 }
