@@ -15,18 +15,24 @@ class _ControlRadioState extends State<ControlRadio> {
         body: Center(
       child: Column(
         children: [
-          Radio(
+          RadioListTile(
+            title: Text('Small'),
             value: 'small',
             groupValue: group,
             onChanged: (value) {
-              print(value);
+              setState(() {
+                group = value.toString();
+              });
             },
           ),
-          Radio(
+          RadioListTile(
+            title: Text('Katta'),
             value: 'large',
             groupValue: group,
             onChanged: (value) {
-              print(value);
+              setState(() {
+                group = value.toString();
+              });
             },
           ),
         ],
