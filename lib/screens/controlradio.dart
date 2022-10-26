@@ -8,6 +8,7 @@ class ControlRadio extends StatefulWidget {
 }
 
 class _ControlRadioState extends State<ControlRadio> {
+  String? group;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,15 +16,15 @@ class _ControlRadioState extends State<ControlRadio> {
       child: Column(
         children: [
           Radio(
-            value: 1,
-            groupValue: 'size',
+            value: 'small',
+            groupValue: group,
             onChanged: (value) {
               print(value);
             },
           ),
           Radio(
-            value: 2,
-            groupValue: 'size',
+            value: 'large',
+            groupValue: group,
             onChanged: (value) {
               print(value);
             },
