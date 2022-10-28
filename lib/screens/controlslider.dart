@@ -20,6 +20,7 @@ class _ControlSliderState extends State<ControlSlider> {
           min: 0,
           max: 10,
           divisions: 5,
+          label: valueSlide.round().toString(),
           value: valueSlide,
           onChanged: (value) {
             print(value);
