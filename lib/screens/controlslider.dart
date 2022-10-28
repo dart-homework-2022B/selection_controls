@@ -10,14 +10,19 @@ class ControlSlider extends StatefulWidget {
 }
 
 class _ControlSliderState extends State<ControlSlider> {
+  double valueSlide = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Center(
             child: Slider(
-          value: 0.5,
-          onChanged: (value) {},
+          value: valueSlide,
+          onChanged: (value) {
+            setState(() {
+              valueSlide = value;
+            });
+          },
         )),
       ),
     );
