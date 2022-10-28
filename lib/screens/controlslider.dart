@@ -17,8 +17,12 @@ class _ControlSliderState extends State<ControlSlider> {
       body: Container(
         child: Center(
             child: Slider(
+          min: 0,
+          max: 10,
+          divisions: 5,
           value: valueSlide,
           onChanged: (value) {
+            print(value);
             setState(() {
               valueSlide = value;
             });
